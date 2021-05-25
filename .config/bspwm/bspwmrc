@@ -1,0 +1,28 @@
+#! /bin/sh
+
+sxhkd &
+setxkbmap pl &
+nitrogen --restore &
+sh ~/.config/polybar/launch.sh
+sh ~/.screenlayout/default.sh
+picom --experimental-backends --backend glx -b
+xinput --set-prop 8 'libinput Accel Speed' -.5
+
+
+bspc monitor HDMI-0 -d Chat Dev 
+bspc monitor DP-4 -d Home Web Game
+bspc monitor DP-2 -d Media Docs
+
+# bspc monitor -d 1 2 3 4 5 6
+
+bspc config border_width         2
+bspc config window_gap         	8
+
+bspc config focus_follows_pointer true
+
+bspc config normal_border_color "#4c566a"
+bspc config focused_border_color "#88c0d0"
+
+bspc config split_ratio          0.50
+bspc config borderless_monocle   true
+bspc config gapless_monocle      true

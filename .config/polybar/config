@@ -1,0 +1,92 @@
+[colors]
+background = #e02e3440
+background-alt = #4c566a
+foreground = #5e81ac
+bright = #88c0d0
+
+[bar/main]
+monitor = ${env:MONITOR:}
+override-redirect = false 
+wm-restack = bspwm
+bottom = false
+background = ${colors.background}
+foreground = ${colors.foreground}
+fixed-center = true
+width = 100%
+height = 24
+radius = 0.0
+line-size = 0
+offset-y = 0
+offset-x = 0
+font-0 = Fira Code:style=bold:pixelsize=10;3
+
+modules-center = bspwm
+modules-right = pihole pulseaudio time
+
+[module/bspwm]
+type = internal/bspwm
+index-sort = true
+enable-click = true
+format = <label-state>
+format-prefix-padding = 2
+#pin-workspaces = true
+
+label-empty-foreground = #4c566a
+label-focused-foreground = ${colors.bright}
+label-focused-background = ${colors.background-alt} 
+label-focused = %name%
+label-focused-padding = 2
+label-occupied = %name%
+label-occupied-padding = 2
+label-occupied-foreground = ${colors.bright}
+label-empty = %name%
+label-empty-padding = 2
+
+[settings]
+label-focused-underline= ${colors.foreground}
+throttle-output = 5
+throttle-output-for = 10
+throttle-input-for = 30
+screenchange-reload = true
+pseudo-transparency = false
+
+[module/time]
+type = internal/date
+time = %H:%M | %d/%m/%y
+format = <label>
+format-prefix = TIME:
+format-prefix-padding = 1
+format-padding = 1
+format-foreground = ${colors.foreground}
+label = %time%
+label-foreground = ${colors.bright}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+
+format-volume = VOL: <label-volume>
+label-muted = muted
+label-muted-padding = 0
+label-volume-foreground = ${colors.bright}
+format-volume-foreground = ${colors.foreground}
+format-volume-padding = 0
+
+
+[module/pihole]
+type = custom/script
+
+exec = /home/badtz/.config/polybar/pi-hole.sh
+interval = 90
+label = %output%
+format-prefix = ADS:
+format-prefix-padding = 1
+format-foreground = ${colors.foreground}
+format-padding = 2
+label-foreground = ${colors.bright}
+
+[bar/two]
+inherit = bar/main
+
+[bar/one]
+inherit = bar/main
