@@ -1,6 +1,7 @@
 #! /bin/sh
 
 sxhkd &
+fcitx -d &
 setxkbmap pl &
 nitrogen --restore &
 sh ~/.config/polybar/launch.sh
