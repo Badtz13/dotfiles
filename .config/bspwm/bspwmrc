@@ -4,14 +4,15 @@ sxhkd &
 setxkbmap pl &
 nitrogen --restore &
 sh ~/.config/polybar/launch.sh
-sh ~/.screenlayout/default.sh
+# sh ~/.screenlayout/default.sh
 picom --experimental-backends --backend glx -b
+# picom -b
 xinput --set-prop 8 'libinput Accel Speed' -.5
 
 
 bspc monitor DP-2 -d Media Docs
-bspc monitor DP-1 -d Home Web Game
-bspc monitor HDMI-1 -d Chat Dev 
+bspc monitor DP-4 -d Home Web Game
+bspc monitor HDMI-0 -d Chat Dev 
 
 # bspc monitor -d 1 2 3 4 5 6
 

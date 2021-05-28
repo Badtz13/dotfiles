@@ -1,8 +1,8 @@
 [colors]
-background = #e02e3440
-background-alt = #4c566a
-foreground = #5e81ac
-bright = #88c0d0
+background = #283040
+background-alt = #8498BF
+foreground = #8498BF
+bright = #CFE1F5
 
 [bar/main]
 monitor = ${env:MONITOR:}
@@ -18,10 +18,10 @@ radius = 0.0
 line-size = 0
 offset-y = 0
 offset-x = 0
-font-0 = Fira Code:style=bold:pixelsize=10;3
+font-0 = azuki_font:style=bold:pixelsize=13;2
 
 modules-center = bspwm
-modules-right = pihole pulseaudio time
+modules-right = pulseaudio time
 
 [module/bspwm]
 type = internal/bspwm
@@ -63,7 +63,7 @@ label-foreground = ${colors.bright}
 
 [module/pulseaudio]
 type = internal/pulseaudio
-sink = alsa_output.pci-0000_00_1b.0.analog-stereo
+sink = alsa_output.usb-SteelSeries_SteelSeries_Arctis_7-00.mono-chat.monitor
 
 format-volume = VOL: <label-volume>
 label-muted = muted

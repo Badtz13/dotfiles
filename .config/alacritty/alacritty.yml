@@ -7,10 +7,33 @@ window:
 history: 1000
 
 font:
+  # Normal (roman) font face
   normal:
-    family: Fira Code
+    family: azuki_font
+    style: Regular
 
-size: 12
+  # Point size
+  size: 13.0
+
+  # Offset is the extra space around each character. `offset.y` can be thought of
+  # as modifying the line spacing, and `offset.x` as modifying the letter spacing.
+  offset:
+    x: 0
+    y: 0
+
+  # Glyph offset determines the locations of the glyphs within their cells with
+  # the default being at the bottom. Increasing `x` moves the glyph to the right,
+  # increasing `y` moves the glyph upwards.
+  glyph_offset:
+    x: 0
+    y: 0
+
+  # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
+  # screens and make reading text a little easier.
+  # On X11 it is possible to change the DPI for each instance of alacritty by using
+  # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
+  # scale_with_dpi: true
+
 
 background_opacity: 1
 
@@ -18,18 +41,18 @@ background_opacity: 1
 colors:
   # Default colors
   primary:
-    background: '0x292d3e'
-    foreground: '0xd0d0d0'
+    background: '0x283040'
+    foreground: '0x8498BF'
 
   # Normal colors
   normal:
     black:   '0x292d3e'
-    red:     '0xf07178'
-    green:   '0xc3e88d'
-    yellow:  '0xffcb6b'
-    blue:    '0x82aaff'
-    magenta: '0xc792ea'
-    cyan:    '0x89ddff'
+    red:     '0xF2A2A2'
+    green:   '0xD0DFE2'
+    yellow:  '0xF2E8D5'
+    blue:    '0xB4C4D9'
+    magenta: '0xDFD1F2'
+    cyan:    '0xdbfcf6'
     white:   '0xd0d0d0'
 
   # Bright colors

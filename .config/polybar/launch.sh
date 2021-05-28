@@ -10,8 +10,6 @@ while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 for m in $(polybar --list-monitors | cut -d":" -f1); do
     MONITOR=$m polybar --reload one &
-    MONITOR=$m polybar --reload two &
-    MONITOR=$m polybar --reload three &
 done
 
 echo "Polybar launched..."
