@@ -3,7 +3,7 @@
 sxhkd &
 fcitx -d &
 setxkbmap pl &
-sh ~/scripts/.fehbg &
+fehbg &
 sh ~/.config/polybar/launch.sh
 picom --experimental-backends --backend glx -b
 xinput --set-prop 8 'libinput Accel Speed' -.5
