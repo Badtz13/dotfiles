@@ -1,6 +1,9 @@
 shell:
   program: /bin/fish
 
+env:
+  TERM: xterm-256color
+
 window:
   dynamic_title: true
 
@@ -37,31 +40,33 @@ font:
 
 background_opacity: 1
 
+draw_bold_text_with_bright_colors: true
+
 # palenight
 colors:
   # Default colors
   primary:
-    background: '0x283040'
-    foreground: '0x8498BF'
+    background: '0x4A5266'
+    foreground: '0x90A6D1'
 
   # Normal colors
   normal:
-    black:   '0x292d3e'
+    black:   '0x31333D'
     red:     '0xF2A2A2'
-    green:   '0xD0DFE2'
-    yellow:  '0xF2E8D5'
-    blue:    '0xB4C4D9'
-    magenta: '0xDFD1F2'
-    cyan:    '0xdbfcf6'
-    white:   '0xd0d0d0'
+    green:   '0xACE6B2'
+    yellow:  '0xF2D6A2'
+    blue:    '0x91B0D9'
+    magenta: '0xF2B6EF'
+    cyan:    '0xA9FCED'
+    white:   '0xCCCCCC'
 
   # Bright colors
   bright:
-    black:   '0x434758'
-    red:     '0xff8b92'
-    green:   '0xddffa7'
-    yellow:  '0xffe585'
-    blue:    '0x9cc4ff'
-    magenta: '0xe1acff'
-    cyan:    '0xa3f7ff'
+    black:   '0x1F243D'
+    red:     '0xF27979'
+    green:   '0x95E69D'
+    yellow:  '0xF2C879'
+    blue:    '0x6C9BD9'
+    magenta: '0xF29DEE'
+    cyan:    '0x7EFCE5'
     white:   '0xffffff'

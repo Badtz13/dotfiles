@@ -15,13 +15,12 @@
 #inputbar {
     text-color: #8498BF;
     padding: 6px;
-    margin: 0px 0px 2px;
     children: [ entry ];
 }
 #entry {
-    background-color: #8498BF;
+    background-color: #283040;
     text-color: #CFE1F5;
-    padding: 5px;
+    padding: 0px;
 }
 #message {
     border: 0px 0px 1px;

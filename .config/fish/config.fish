@@ -1,2 +1,2 @@
 set -x LC_ALL en_US.UTF-8
-bash ~/scripts/bunnyfetch.sh
+# bunnyfetch

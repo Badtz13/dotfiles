@@ -3,22 +3,19 @@
 sxhkd &
 fcitx -d &
 setxkbmap pl &
-nitrogen --restore &
+sh ~/scripts/.fehbg &
 sh ~/.config/polybar/launch.sh
-# sh ~/.screenlayout/default.sh
 picom --experimental-backends --backend glx -b
-# picom -b
 xinput --set-prop 8 'libinput Accel Speed' -.5
 
+xsetroot -cursor_name left_ptr
 
 bspc monitor DP-2 -d Media Docs
 bspc monitor DP-4 -d Home Web Game
 bspc monitor HDMI-0 -d Chat Dev 
 
-# bspc monitor -d 1 2 3 4 5 6
-
-bspc config border_width         2
-bspc config window_gap         	8
+bspc config border_width 2
+bspc config window_gap 8
 
 bspc config focus_follows_pointer true
 
@@ -29,4 +26,4 @@ bspc config split_ratio          0.50
 bspc config borderless_monocle   true
 bspc config gapless_monocle      true
 
-bspc rule -a feh state=floating
+# bspc rule -a feh state=floating
