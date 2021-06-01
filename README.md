@@ -16,3 +16,4 @@
 | IME | fcitx / mozc |
 | Audio backend | pulseaudio | 
 | Font | Azuki |
+| Greeter | Lightdm-mini-greeter |
