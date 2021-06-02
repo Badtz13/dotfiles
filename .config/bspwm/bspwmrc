@@ -3,10 +3,12 @@
 sxhkd &
 fcitx -d &
 setxkbmap pl &
-fehbg &
+fish -c fehbg &
 sh ~/.config/polybar/launch.sh
 picom --experimental-backends --backend glx -b
-xinput --set-prop 8 'libinput Accel Speed' -.5
+
+mouseid=$(xinput | grep G703 | grep pointer | awk -F= '{print $2}' | awk '{print $1}')
+xinput --set-prop $mouseid 'libinput Accel Speed' -.6
 
 xsetroot -cursor_name left_ptr
 
