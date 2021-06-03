@@ -13,6 +13,7 @@
 | Hotkeys | sxhkd |
 | Menu | Rofi |
 | Compositor | Picom (ibhagwan fork) |
+| File Browser | Ranger |
 | IME | fcitx / mozc |
 | Audio backend | pulseaudio | 
 | Font | Azuki |
