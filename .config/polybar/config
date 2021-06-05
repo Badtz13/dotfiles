@@ -21,7 +21,7 @@ offset-x = 0
 font-0 = azuki_font:style=bold:pixelsize=13;2
 
 modules-center = bspwm
-modules-right = pulseaudio time
+modules-right = pihole pulseaudio time
 
 [module/bspwm]
 type = internal/bspwm
