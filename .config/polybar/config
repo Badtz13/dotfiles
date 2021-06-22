@@ -52,7 +52,7 @@ pseudo-transparency = false
 
 [module/time]
 type = internal/date
-time = %I:%M %p | %d/%m/%y
+time = %I:%M %p | %m/%d/%y
 format = <label>
 format-prefix = TIME:
 format-prefix-padding = 1

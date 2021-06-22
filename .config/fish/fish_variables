@@ -1,7 +1,9 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export SSB_HOME:/home/badtz/\x2elocal/share/zoom
 SETUVAR SXHKD_SHELL:/usr/bin/bash
 SETUVAR --export TERM:xterm\x2d256color
+SETUVAR --export VSCODE_PORTABLE:/home/badtz/\x2elocal/share/vscode\x2doss/
 SETUVAR --export XDG_CACHE_HOME:/home/badtz/\x2ecache
 SETUVAR --export XDG_CONFIG_HOME:/home/badtz/\x2econfig
 SETUVAR --export XDG_DATA_HOME:/home/badtz/\x2elocal/share

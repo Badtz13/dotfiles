@@ -5,7 +5,8 @@ fcitx -d &
 setxkbmap pl &
 fish -c fehbg &
 sh ~/.config/polybar/launch.sh
-picom --experimental-backends --backend glx -b
+antidot init
+# picom --experimental-backends --backend glx -b
 
 mouseid=$(xinput | grep G703 | grep pointer | awk -F= '{print $2}' | awk '{print $1}')
 xinput --set-prop $mouseid 'libinput Accel Speed' -.6
@@ -13,16 +14,16 @@ xinput --set-prop $mouseid 'libinput Accel Speed' -.6
 xsetroot -cursor_name left_ptr
 
 bspc monitor DP-2 -d Media Docs
-bspc monitor DP-4 -d Home Web Game
+bspc monitor DP-4 -d Home Web
 bspc monitor HDMI-0 -d Chat Dev 
 
 bspc config border_width 2
-bspc config window_gap 8
+bspc config window_gap 16
 
 bspc config focus_follows_pointer true
 
 bspc config normal_border_color "#4c566a"
-bspc config focused_border_color "#88c0d0"
+bspc config focused_border_color "#90A6D1"
 
 bspc config split_ratio          0.50
 bspc config borderless_monocle   true
