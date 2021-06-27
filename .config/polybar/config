@@ -21,7 +21,7 @@ offset-x = 0
 font-0 = azuki_font:style=bold:pixelsize=13;2
 
 modules-center = bspwm
-modules-right = pihole pulseaudio time
+modules-right = pihole pulseaudio weather time
 
 [module/bspwm]
 type = internal/bspwm
@@ -83,6 +83,18 @@ format-prefix = ADS:
 format-prefix-padding = 1
 format-foreground = ${colors.foreground}
 format-padding = 2
+label-foreground = ${colors.bright}
+
+[module/weather]
+type = custom/script
+
+exec = /home/badtz/.config/polybar/weather.sh
+interval = 90
+label = %output%
+format-prefix = TEMP:
+format-prefix-padding = 1
+format-foreground = ${colors.foreground}
+format-padding = 0
 label-foreground = ${colors.bright}
 
 [bar/two]

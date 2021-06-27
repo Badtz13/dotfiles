@@ -40,6 +40,9 @@ bspc config pointer_motion_interval 7ms
 
 bspc rule -a '*:feh' state=floating
 bspc rule -a '*:mpv' state=floating
+bspc rule -a '*:Minecraft' state=floating
 bspc rule -a Zathura state=floating
 bspc rule -a Anki state=floating
 bspc rule -a firefox:Toolkit sticky=on state=floating
+bspc rule -a gdlauncher state=floating
+
