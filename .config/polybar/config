@@ -19,6 +19,7 @@ line-size = 0
 offset-y = 0
 offset-x = 0
 font-0 = azuki_font:style=bold:pixelsize=13;2
+font-1 = typicons:style=normal:pixelsize=14;2
 
 modules-center = bspwm
 modules-right = pihole pulseaudio weather time
@@ -30,7 +31,6 @@ enable-click = true
 format = <label-state>
 format-prefix-padding = 2
 #pin-workspaces = true
-
 label-empty-foreground = #4c566a
 label-focused-foreground = ${colors.bright}
 label-focused-background = ${colors.background-alt} 
@@ -54,10 +54,10 @@ pseudo-transparency = false
 type = internal/date
 time = %I:%M %p | %m/%d/%y
 format = <label>
-format-prefix = TIME:
+format-prefix = 
 format-prefix-padding = 1
 format-padding = 1
-format-foreground = ${colors.foreground}
+format-foreground = #6C9BD9
 label = %time%
 label-foreground = ${colors.bright}
 
@@ -65,35 +65,35 @@ label-foreground = ${colors.bright}
 type = internal/pulseaudio
 sink = alsa_output.usb-SteelSeries_SteelSeries_Arctis_7-00.mono-chat.monitor
 
-format-volume = VOL: <label-volume>
+format-prefix-padding = 1
+format-padding = 1
+format-volume =  <label-volume>
 label-muted = muted
-label-muted-padding = 0
+label-muted-padding = 1
 label-volume-foreground = ${colors.bright}
-format-volume-foreground = ${colors.foreground}
-format-volume-padding = 0
+format-volume-foreground = #95E69D
+format-volume-padding = 1
 
 
 [module/pihole]
 type = custom/script
-
 exec = /home/badtz/.config/polybar/pi-hole.sh
 interval = 90
 label = %output%
-format-prefix = ADS:
+format-prefix = 
 format-prefix-padding = 1
-format-foreground = ${colors.foreground}
-format-padding = 2
+format-foreground = #F27979
+format-padding = 1
 label-foreground = ${colors.bright}
 
 [module/weather]
 type = custom/script
-
 exec = /home/badtz/.config/polybar/weather.sh
 interval = 90
 label = %output%
-format-prefix = TEMP:
+format-prefix = 
 format-prefix-padding = 1
-format-foreground = ${colors.foreground}
+format-foreground = #F2C879
 format-padding = 0
 label-foreground = ${colors.bright}
 
