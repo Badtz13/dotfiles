@@ -23,6 +23,7 @@ font-1 = typicons:style=normal:pixelsize=14;2
 
 modules-center = bspwm
 modules-right = pihole pulseaudio weather time
+modules-left = spotify
 
 [module/bspwm]
 type = internal/bspwm
@@ -64,16 +65,15 @@ label-foreground = ${colors.bright}
 [module/pulseaudio]
 type = internal/pulseaudio
 sink = alsa_output.usb-SteelSeries_SteelSeries_Arctis_7-00.mono-chat.monitor
-
 format-prefix-padding = 1
 format-padding = 1
-format-volume =  <label-volume>
-label-muted = muted
+format-volume =  <label-volume>
+label-muted = 
+label-muted-foreground = #F29DEE
 label-muted-padding = 1
 label-volume-foreground = ${colors.bright}
-format-volume-foreground = #95E69D
+format-volume-foreground = #F29DEE
 format-volume-padding = 1
-
 
 [module/pihole]
 type = custom/script
@@ -96,6 +96,18 @@ format-prefix-padding = 1
 format-foreground = #F2C879
 format-padding = 0
 label-foreground = ${colors.bright}
+
+[module/spotify]
+type = custom/script
+exec = /home/badtz/.config/polybar/spotify.sh
+interval = 20
+label = %output%
+format-prefix = 
+format-prefix-padding = 1
+format-foreground = #95E69D
+format-padding = 0
+label-foreground = ${colors.bright}
+
 
 [bar/two]
 inherit = bar/main
