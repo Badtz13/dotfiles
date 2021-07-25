@@ -22,8 +22,8 @@ font-0 = azuki_font:style=bold:pixelsize=13;2
 font-1 = typicons:style=normal:pixelsize=14;2
 
 modules-center = bspwm
-modules-right = pihole pulseaudio weather time
-modules-left = spotify
+modules-right = minecraft pihole pulseaudio weather time
+#modules-left = spotify
 
 [module/bspwm]
 type = internal/bspwm
@@ -47,7 +47,6 @@ label-empty-padding = 2
 label-focused-underline= ${colors.foreground}
 throttle-output = 5
 throttle-output-for = 10
-throttle-input-for = 30
 screenchange-reload = true
 pseudo-transparency = false
 
@@ -108,6 +107,16 @@ format-foreground = #95E69D
 format-padding = 0
 label-foreground = ${colors.bright}
 
+[module/minecraft]
+type = custom/script
+exec = /home/badtz/.config/polybar/minecraft.sh
+interval = 20
+label = %output%
+format-prefix = 
+format-prefix-padding = 1
+format-foreground = #95E69D
+format-padding = 0
+label-foreground = ${colors.bright}
 
 [bar/two]
 inherit = bar/main

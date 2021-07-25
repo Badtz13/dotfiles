@@ -16,7 +16,7 @@ super + Return
 
 # scrot
 super + shift + x
-	scrot -s
+	scrot -s '%Y-%m-%d_$wx$h.png' -e 'mv $f /home/badtz/Pictures/Screenshots/'
 
 # lock with lightdm
 super + ctrl + l
