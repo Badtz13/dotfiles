@@ -1,6 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BROWSER:firefox
+SETUVAR MANGOHUD_CONFIG:\x1d
 SETUVAR --export SSB_HOME:/home/badtz/\x2elocal/share/zoom
 SETUVAR SXHKD_SHELL:/usr/bin/bash
 SETUVAR --export TERM:xterm\x2d256color

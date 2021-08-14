@@ -8,6 +8,7 @@ fish -c fehbg &
 sh ~/.config/polybar/launch.sh
 antidot init
 # picom --experimental-backends --backend glx -b
+easyeffects --gapplication-service &
 
 mouseid=$(xinput | grep G703 | grep pointer | awk -F= '{print $2}' | awk '{print $1}')
 xinput --set-prop $mouseid 'libinput Accel Speed' -.6

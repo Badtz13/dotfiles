@@ -15,6 +15,6 @@
 | Menu | Rofi |
 | Compositor | Picom (ibhagwan fork) |
 | IME | fcitx / mozc |
-| Audio backend | pulseaudio | 
+| Audio backend | pipewire | 
 | Font | Azuki |
 | Greeter | Lightdm-mini-greeter |
