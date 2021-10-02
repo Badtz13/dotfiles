@@ -110,7 +110,7 @@ label-foreground = ${colors.bright}
 [module/minecraft]
 type = custom/script
 exec = /home/badtz/.config/polybar/minecraft.sh
-interval = 20
+interval = 120
 label = %output%
 format-prefix = 
 format-prefix-padding = 1

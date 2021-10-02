@@ -10,15 +10,15 @@ antidot init
 # picom --experimental-backends --backend glx -b
 easyeffects --gapplication-service &
 
-mouseid=$(xinput | grep G703 | grep pointer | awk -F= '{print $2}' | awk '{print $1}')
-xinput --set-prop $mouseid 'libinput Accel Speed' -.6
+# mouseid=$(xinput | grep G703 | grep pointer | awk -F= '{print $2}' | awk '{print $1}')
+# xinput --set-prop $mouseid 'libinput Accel Speed' -.6
 
 xsetroot -cursor_name left_ptr
 
 # setup workspaces
 bspc monitor DP-2 -d Media Docs
-bspc monitor DP-4 -d Home Web
-bspc monitor HDMI-0 -d Chat Dev Extra
+bspc monitor DP-4 -d Main Web
+bspc monitor HDMI-0 -d Chat Dev Extra Tools
 
 # handle monitors
 bspc config remove_disabled_monitors true

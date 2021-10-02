@@ -1,7 +1,6 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BROWSER:firefox
-SETUVAR MANGOHUD_CONFIG:\x1d
 SETUVAR --export SSB_HOME:/home/badtz/\x2elocal/share/zoom
 SETUVAR SXHKD_SHELL:/usr/bin/bash
 SETUVAR --export TERM:xterm\x2d256color
@@ -9,6 +8,7 @@ SETUVAR --export VSCODE_PORTABLE:/home/badtz/\x2elocal/share/vscode\x2doss/
 SETUVAR --export XDG_CACHE_HOME:/home/badtz/\x2ecache
 SETUVAR --export XDG_CONFIG_HOME:/home/badtz/\x2econfig
 SETUVAR --export XDG_DATA_HOME:/home/badtz/\x2elocal/share
+SETUVAR _JAVA_OPTIONS:\x2dDjava\x2eutil\x2eprefs\x2euserRoot\x3d/home/badtz/\x2econfig/java
 SETUVAR __fish_initialized:3100
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr
