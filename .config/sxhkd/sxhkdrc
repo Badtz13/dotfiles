@@ -8,7 +8,7 @@ super + Escape
 
 # program launcher
 super + shift + Return
-	rofi -show drun -no-default-config
+	rofi -show drun 
 
 # alacritty
 super + Return
