@@ -6,6 +6,7 @@
 
 * {
     selected-normal-foreground:  #4c566a;
+    font:                        "Fira Code 12";
     foreground:                  #eceff4;
     normal-foreground:           @foreground;
     alternate-normal-background: rgba ( 64, 69, 82, 59 % );
@@ -39,7 +40,7 @@ window {
     border: 2px solid;
     padding:          0;
     width:          500;
-    height:         198;
+    height:         206;
 }
 mainbox {
     border:  0;
@@ -133,14 +134,14 @@ case-indicator {
     spacing:    0;
     text-color: @normal-foreground;
 }
+prompt {
+    enabled:false;
+}
 entry {
     spacing:    0;
     text-color: @normal-foreground;
     margin: 2px 0px 0px 0px;
-    blink: false;
-}
-prompt {
-    enabled:false;
+    blink: true;
 }
 inputbar {
     children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
