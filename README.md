@@ -15,6 +15,7 @@
 | Menu | Rofi |
 | Compositor | Picom (ibhagwan fork) |
 | IME | fcitx / mozc |
-| Audio backend | pipewire | 
-| Font | Azuki |
-| Greeter | Lightdm-mini-greeter |
+| Audio backend | Pipewire | 
+| Font | Fira Code |
+| Greeter | ly |
+| Image Host | catbox.moe |
