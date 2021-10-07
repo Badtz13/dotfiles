@@ -1,6 +1,6 @@
 # dotfiles
 
-![screenshot](https://i.imgur.com/coUWiVT.png)
+![screenshot](https://files.catbox.moe/5olxiq.png)
 
 ### Current Stack
 
