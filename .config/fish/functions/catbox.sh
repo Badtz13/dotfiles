@@ -114,7 +114,7 @@ then
         echo -en "\n"
         echo -en "Uploaded to: \e[1m$link\n"
         echo -n $link|xclip -selection clipboard
-        echo -n rm $file
+        rm $file
       else
         echo -e "\e[91mFile $file dose not exists!\e[0m"
       fi
@@ -133,7 +133,7 @@ then
         echo -en "\n"
         echo -en "Uploaded to: \e[1m$link\n"
         echo -n $link|xclip -selection clipboard
-        echo -n rm $file
+        rm $file
       else
         echo -e "\e[91mFile $file dose not exists!\e[0m"
       fi
