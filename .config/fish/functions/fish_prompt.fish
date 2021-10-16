@@ -1,14 +1,21 @@
 function fish_prompt
-    if test -n "$SSH_TTY"
-        echo -n (set_color brred)"$USER"(set_color white)'@'(set_color yellow)(prompt_hostname)' '
+    # This is a simple prompt. It looks like
+    # alfa@nobby /path/to/dir $
+    # with the path shortened and colored
+    # and a "#" instead of a "$" when run as root.
+    set -l symbol ' 次 '
+    set -l color $fish_color_cwd
+    if fish_is_root_user
+        set symbol ' 王 '
+        set -q fish_color_cwd_root
+        and set color $fish_color_cwd_root
     end
 
-    echo -n (set_color blue)(prompt_pwd)' '
+    echo -n $USER
 
-    set_color -o
-    if test "$USER" = 'root'
-        echo -n (set_color red)'# '
-    end
-    echo -n (set_color 68809a)'❯'(set_color B4C0CD)'❯'(set_color white)'❯ '
+    set_color $color
+    echo -n (prompt_pwd)
     set_color normal
+
+    echo -n $symbol
 end

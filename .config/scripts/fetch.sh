@@ -67,7 +67,7 @@ default() {
   printf "${c4} Kernel: $(Kernel)\n"
   printf "${c5} Uptime: $(Uptime)\n"
   printf "${c6} Shell: $(Shell)\n"
-  printf "${c7} DE/WM: $(Desktop)\n"
+  printf "${c7} WM: $(Desktop)\n"
   printf "${c8} Memory: $(Memory)\n"
 }
 
