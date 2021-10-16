@@ -20,7 +20,7 @@ super + Return
 
 # scrot
 super + shift + x
-	scrot -s '%Y-%m-%d_$wx$h.png' -e 'sh catbox.sh file $f'
+	maim -s screenshot.png;sh catbox.sh file screenshot.png
 
 # lock with lightdm
 super + ctrl + l
