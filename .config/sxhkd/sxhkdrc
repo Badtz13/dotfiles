@@ -10,13 +10,17 @@ super + Escape
 super + shift + Return
 	rofi -show drun 
 
+# twitch launcher
+super + shift + v
+	kpl
+
 # alacritty
 super + Return
 	alacritty
 
 # scrot
 super + shift + x
-	scrot -s '%Y-%m-%d_$wx$h.png' -e 'sh /home/badtz/.config/fish/functions/catbox.sh file $f'
+	scrot -s '%Y-%m-%d_$wx$h.png' -e 'sh catbox.sh file $f'
 
 # lock with lightdm
 super + ctrl + l
