@@ -61,6 +61,7 @@ ${c5} Example Usage:
 ${c6}   fetch -nosd"; }
 
 default() {
+  printf "\n"
   printf "${c2} $(Name)\n"
   printf "${c3} Os: $(Os)\n"
   printf "${c4} Kernel: $(Kernel)\n"
