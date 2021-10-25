@@ -45,12 +45,12 @@ getHash()
     then
       echo $p
     fi
-  done < "$HOME/.catbox"
+  done < "$HOME/.config/.catbox"
 }
 
 checkUH()
 {
-  if ! [ -f "$HOME/.catbox" ]
+  if ! [ -f "$HOME/.config/.catbox" ]
   then
     echo -e "\e[91mNo userhash set! $1\e[0m"
     echo "Use 'catbox user <hash>' first then try again!"
@@ -73,7 +73,7 @@ then
   
   if [ -z $2 ]
   then
-    if [ -f "$HOME/.catbox" ]
+    if [ -f "$HOME/.config/.catbox" ]
     then
       echo "Your current userhash is: $(getHash)"
     else
@@ -82,10 +82,10 @@ then
   else
     if [ $2 != "off" ]
     then
-      echo -e "#CatBox.moe userhash file\n$2" > "$HOME/.catbox"
-      echo "Userhash $2 set in $HOME/.catbox"
+      echo -e "#CatBox.moe userhash file\n$2" > "$HOME/.config/.catbox"
+      echo "Userhash $2 set in $HOME/.config/.catbox"
     else
-      rm "$HOME/.catbox"
+      rm "$HOME/.config/.catbox"
       echo "You are now Anonymous!"
     fi
   fi
@@ -99,7 +99,7 @@ then
     exit 1
   fi
 
-  if [ -f "$HOME/.catbox" ]
+  if [ -f "$HOME/.config/.catbox" ]
   then
     echo "Uploading with userhash..."
     one=0
@@ -149,7 +149,7 @@ then
     exit 1
   fi
 
-  if [ -f "$HOME/.catbox" ]
+  if [ -f "$HOME/.config/.catbox" ]
   then
     echo "Uploading with userhash..."
     one=0

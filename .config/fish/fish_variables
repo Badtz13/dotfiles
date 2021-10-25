@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BROWSER:firefox
+SETUVAR MOZ_WEBRENDER:1
+SETUVAR MOZ_X11_EGL:1
 SETUVAR --export SSB_HOME:/home/badtz/\x2elocal/share/zoom
 SETUVAR SXHKD_SHELL:/usr/bin/bash
 SETUVAR --export TERM:xterm\x2d256color

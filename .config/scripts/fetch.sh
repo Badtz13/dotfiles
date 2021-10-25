@@ -20,9 +20,8 @@ Name() {
   printf "$(whoami)@$host";
 }
 Os() { printf $NAME; }
-Kernel() {
-  printf "$(read -r _ _ kern _ < /proc/version;
-  printf $kern)";
+Packages() {
+  printf $(pacman -Qq | wc -l);
 }
 Uptime() {
   IFS=. read -r up _ < /proc/uptime;
@@ -63,11 +62,11 @@ ${c6}   fetch -nosd"; }
 default() {
   printf "${c2} $(Name)\n"
   printf "${c3} Os: $(Os)\n"
-  printf "${c4} Kernel: $(Kernel)\n"
+  printf "${c4} Packages: $(Packages)\n"
   printf "${c5} Uptime: $(Uptime)\n"
   printf "${c6} Shell: $(Shell)\n"
   printf "${c7} WM: $(Desktop)\n"
-  printf "${c8} Memory: $(Memory)\n"
+  # printf "${c8} Memory: $(Memory)\n"
 }
 
 if [ "$1" != "" ]; then
@@ -78,7 +77,7 @@ if [ "$1" != "" ]; then
       o)
         printf "${c3} Os: $(Os)\n";;
       k)
-        printf "${c4} Kernel: $(Kernel)\n";;
+        printf "${c4} Packages: $(Packages)\n";;
       u)
         printf "${c5} Uptime: $(Uptime)\n";;
       s)

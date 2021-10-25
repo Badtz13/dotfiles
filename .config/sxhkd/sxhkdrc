@@ -10,10 +10,6 @@ super + Escape
 super + shift + Return
 	rofi -show drun 
 
-# twitch launcher
-super + shift + v
-	kpl
-
 # alacritty
 super + Return
 	alacritty
@@ -21,10 +17,6 @@ super + Return
 # scrot
 super + shift + x
 	maim -s screenshot.png;sh catbox.sh file screenshot.png
-
-# lock with lightdm
-super + ctrl + l
-	dm-tool lock
 
 #  ] -----  BSPWM HOTKEYS  ----- [
 

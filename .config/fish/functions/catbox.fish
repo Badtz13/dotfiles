@@ -1,3 +1,3 @@
 function catbox --wraps='sh catbox.sh' --description 'alias catbox'
-  sh catbox.sh $argv; 
+  sh $HOME/.config/scripts/catbox.sh $argv; 
 end
