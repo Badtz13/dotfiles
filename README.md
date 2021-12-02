@@ -1,6 +1,6 @@
 # dotfiles
 
-![screenshot](https://files.catbox.moe/5olxiq.png)
+![screenshot](Pictures/screenshot.png)
 
 ### Current Stack
 
