@@ -18,6 +18,7 @@ xsetroot -cursor_name left_ptr
 # setup workspaces
 bspc monitor DP-2 -d Media Docs
 bspc monitor DP-4 -d Main Web
+# bspc monitor DP-4 -d Main Web Chat Media
 bspc monitor HDMI-0 -d Chat Dev Extra Tools
 
 # handle monitors
