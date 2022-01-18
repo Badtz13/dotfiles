@@ -22,7 +22,7 @@ font-0 = firacode:style=normal:pixelsize=12;3
 font-1 = typicons:style=normal:pixelsize=13;3
 
 modules-center = bspwm
-modules-right = minecraft pulseaudio weather time
+modules-right = minecraft pihole pulseaudio time
 #modules-left = spotify
 
 [module/bspwm]
@@ -52,7 +52,7 @@ pseudo-transparency = false
 
 [module/time]
 type = internal/date
-time = %I:%M %p | %m/%d/%y
+time = %I:%M %p | %m/%d/%y    
 format = <label>
 format-prefix = 
 format-prefix-padding = 1
@@ -72,7 +72,7 @@ label-muted-foreground = #b48ead
 label-muted-padding = 1
 label-volume-foreground = ${colors.bright}
 format-volume-foreground = #b48ead
-format-volume-padding = 1
+format-volume-padding = 0
 
 [module/pihole]
 type = custom/script
@@ -81,7 +81,7 @@ interval = 90
 label = %output%
 format-prefix = 
 format-prefix-padding = 1
-format-foreground = #ebcb8b
+format-foreground = #bf616a
 format-padding = 1
 label-foreground = ${colors.bright}
 
@@ -110,12 +110,12 @@ label-foreground = ${colors.bright}
 [module/minecraft]
 type = custom/script
 exec = /home/badtz/.config/polybar/minecraft.sh
-interval = 120
+interval = 1000
 label = %output%
 format-prefix = 
 format-prefix-padding = 1
 format-foreground = #a3be8c
-format-padding = 1
+format-padding = 0
 label-foreground = ${colors.bright}
 
 [bar/two]
