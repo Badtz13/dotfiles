@@ -9,6 +9,7 @@ env:
 
 window:
   dynamic_title: true
+  opacity: 1
   padding:
     x: 4
     y: 4
@@ -43,8 +44,6 @@ font:
   # `WINIT_HIDPI_FACTOR=1.0 alacritty` to scale the font.
   # scale_with_dpi: true
 
-
-background_opacity: 1
 
 draw_bold_text_with_bright_colors: true
 
