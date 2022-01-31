@@ -5,6 +5,7 @@ sxhkd &
 fcitx -d &
 setxkbmap pl &
 fish -c fehbg &
+dunst &
 sh ~/.config/polybar/launch.sh
 antidot init
 picom --experimental-backends --backend glx -b
