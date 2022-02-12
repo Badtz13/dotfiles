@@ -1,8 +1,8 @@
 shell:
   program: /bin/fish
-  args:
-    - --init-command
-    - sh fetch.sh
+  # args:
+  #   - --init-command
+  #   - sh fetch.sh
 
 env:
   TERM: xterm-256color

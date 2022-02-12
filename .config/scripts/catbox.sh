@@ -113,6 +113,7 @@ then
         link=`curl -F "reqtype=fileupload" -F "userhash=$(getHash)" -F "fileToUpload=@$file" $HOST`
         echo -en "\n"
         echo -en "Uploaded to: \e[1m$link\n"
+        notify-send -u low "Uploaded to: $link"
         echo -n $link|xclip -selection clipboard
         rm $file
       else
@@ -132,6 +133,7 @@ then
         link=`curl -F "reqtype=fileupload" -F "fileToUpload=@$file" $HOST`
         echo -en "\n"
         echo -en "Uploaded to: \e[1m$link\n"
+        notify-send -u low "Uploaded to: $link"
         echo -n $link|xclip -selection clipboard
         rm $file
       else
