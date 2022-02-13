@@ -23,8 +23,8 @@ font-0 = firacode:style=normal:pixelsize=12;3
 font-1 = typicons:style=normal:pixelsize=13;3
 
 modules-center = bspwm
-modules-right = minecraft pihole dunst pulseaudio time
-modules-left = spotify
+modules-right = pihole dunst pulseaudio time
+modules-left = create flowerland cody
 
 [module/bspwm]
 type = internal/bspwm
@@ -108,17 +108,6 @@ format-foreground = #95E69D
 format-padding = 0
 label-foreground = ${colors.bright}
 
-[module/minecraft]
-type = custom/script
-exec = /home/badtz/.config/polybar/minecraft.sh
-interval = 1000
-label = %output%
-format-prefix = 
-format-prefix-padding = 1
-format-foreground = #a3be8c
-format-padding = 0
-label-foreground = ${colors.bright}
-
 [module/dunst]
 type = custom/ipc
 initial = 1
@@ -126,6 +115,40 @@ format-foreground = #ebcb8b
 format-padding = 1
 hook-0 = echo "%{A1:dunstctl set-paused true && polybar-msg hook dunst 2:}%{A}"
 hook-1 = echo "%{A1:dunstctl set-paused false && polybar-msg hook dunst 1:}%{A}"
+
+[module/create]
+type = custom/script
+exec = /home/badtz/.config/polybar/minecraft.sh 13.91.107.220 20
+interval = 1000
+label = %output%
+format-prefix = 
+format-prefix-padding = 0
+format-foreground = #ebcb8b
+format-padding = 1
+label-foreground = ${colors.bright}
+
+[module/flowerland]
+type = custom/script
+exec = /home/badtz/.config/polybar/minecraft.sh flowerland.modded.fun 8
+interval = 1000
+label = %output%
+format-prefix = 
+format-prefix-padding = 0
+format-foreground = #b48ead
+format-padding = 1
+label-foreground = ${colors.bright}
+
+[module/cody]
+type = custom/script
+exec = /home/badtz/.config/polybar/minecraft.sh 50.47.149.76 20
+interval = 1000
+label = %output%
+format-prefix = 
+format-prefix-padding = 0
+format-foreground = #a3be8c
+format-padding = 1
+label-foreground = ${colors.bright}
+
 
 
 [bar/two]
