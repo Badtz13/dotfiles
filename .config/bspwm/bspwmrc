@@ -9,17 +9,18 @@ dunst &
 sh ~/.config/polybar/launch.sh
 antidot init
 picom --experimental-backends --backend glx -b
-easyeffects --gapplication-service &
 
 # mouseid=$(xinput | grep G703 | grep pointer | awk -F= '{print $2}' | awk '{print $1}')
 # xinput --set-prop $mouseid 'libinput Accel Speed' -.6
+
+export _JAVA_AWT_WM_NONREPARENTING=1
+
 
 xsetroot -cursor_name left_ptr
 
 # setup workspaces
 bspc monitor DP-2 -d Media Docs
 bspc monitor DP-4 -d Main Web
-# bspc monitor DP-4 -d Main Web Chat Media
 bspc monitor HDMI-0 -d Chat Dev Extra Tools
 
 # handle monitors
@@ -41,11 +42,16 @@ bspc config focus_follows_pointer	true
 bspc config history_aware_focus     true
 bspc config pointer_motion_interval 7ms
 
+# reset rules
+bspc rule -r * 
+
+# states
 bspc rule -a '*:feh' state=floating
 bspc rule -a '*:mpv' state=floating
 bspc rule -a '*:Minecraft' state=floating
-# bspc rule -a Zathura state=floating
-# bspc rule -a Anki state=floating
-bspc rule -a firefox:Toolkit sticky=on state=floating
 bspc rule -a gdlauncher state=floating
-
+bspc rule -a 'leagueclientux.exe' state=pseudo_tiled desktop="Main"
+bspc rule -a zoom state=floating center=on follow=on
+bspc rule -a dgg-chat desktop="Chat" split_ratio=0.36 split_dir=west
+bspc rule -a discord desktop="Chat"
+bspc rule -a firefox:Toolkit state=floating desktop="Chat" rectangle=652x362+3862+45

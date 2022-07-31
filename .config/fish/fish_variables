@@ -1,6 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export BROWSER:firefox
+SETUVAR CONDA_AUTO_ACTIVATE_BASE:false
+SETUVAR --export --path GOPATH:/home/badtz/\x2ecache/go
 SETUVAR MOZ_WEBRENDER:1
 SETUVAR MOZ_X11_EGL:1
 SETUVAR --export SSB_HOME:/home/badtz/\x2elocal/share/zoom
@@ -12,7 +14,7 @@ SETUVAR --export XDG_CONFIG_HOME:/home/badtz/\x2econfig
 SETUVAR --export XDG_CURRENT_DESKTOP:bspwm
 SETUVAR --export XDG_DATA_HOME:/home/badtz/\x2elocal/share
 SETUVAR _JAVA_OPTIONS:\x2dDjava\x2eutil\x2eprefs\x2euserRoot\x3d/home/badtz/\x2econfig/java
-SETUVAR __fish_initialized:3100
+SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:969896
 SETUVAR fish_color_cancel:\x2dr
 SETUVAR fish_color_command:b294bb
@@ -42,4 +44,5 @@ SETUVAR fish_pager_color_completion:normal
 SETUVAR fish_pager_color_description:B3A06D\x1eyellow
 SETUVAR fish_pager_color_prefix:white\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
-SETUVAR fish_user_paths:\x2econfig/scripts
+SETUVAR fish_pager_color_selected_background:\x2dr
+SETUVAR fish_user_paths:/home/badtz/\x2econfig/scripts\x1e/home/badtz/\x2ecache/go/bin\x1e\x2econfig/scripts\x1e/home/badtz/\x2eyarn/bin\x1e/home/badtz/\x2elocal/bin\x1e/home/badtz/anaconda3/bin
