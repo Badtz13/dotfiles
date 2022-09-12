@@ -10,6 +10,9 @@ super + Escape
 super + shift + Return
 	rofi -show drun 
 
+super + shift + p
+	~/.config/rofi/powermenu/type-2/powermenu.sh
+
 # alacritty
 super + Return
 	alacritty
@@ -59,10 +62,10 @@ super + {grave,Tab}
 	bspc {node,desktop} -f last
 
 # focus the older or newer node in the focus history
-super + {p,o}
-	bspc wm -h off; \
-	bspc node {older,newer} -f; \
-	bspc wm -h on
+# super + {p,o}
+# 	bspc wm -h off; \
+# 	bspc node {older,newer} -f; \
+# 	bspc wm -h
 
 # focus or send to the given desktop
 super + {_,shift + }{1-8}

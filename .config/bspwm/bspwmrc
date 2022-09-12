@@ -55,3 +55,5 @@ bspc rule -a zoom state=floating center=on follow=on
 bspc rule -a dgg-chat desktop="Chat" split_ratio=0.36 split_dir=west
 bspc rule -a discord desktop="Chat"
 bspc rule -a firefox:Toolkit state=floating desktop="Chat" rectangle=652x362+3862+45
+bspc rule -a Mumble:"Mumble -- 1.4.230" state=pseudo_tiled desktop="Chat" rectangle=630x350+160+120
+bspc rule -a Mumble:"Mumble Server Connect" state=floating

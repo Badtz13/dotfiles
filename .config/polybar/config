@@ -23,7 +23,7 @@ font-0 = firacode:style=normal:pixelsize=12;3
 font-1 = typicons:style=normal:pixelsize=13;3
 
 modules-center = bspwm
-modules-right = pomo dunst pulseaudio time
+modules-right = dunst pulseaudio time
 modules-left = 
 
 [module/bspwm]
