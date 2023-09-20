@@ -23,8 +23,8 @@ font-0 = firacode:style=normal:pixelsize=12;3
 font-1 = typicons:style=normal:pixelsize=13;3
 
 modules-center = bspwm
-modules-right = dunst pulseaudio time
-modules-left = 
+modules-right = dunst time
+modules-left = gcal_next_event
 
 [module/bspwm]
 type = internal/bspwm
@@ -53,11 +53,11 @@ pseudo-transparency = false
 
 [module/time]
 type = internal/date
-time = %I:%M %p | %m/%d/%y    
+time = %I:%M %p | %m/%d/%y |     
 format = <label>
 format-prefix = 
-format-prefix-padding = 1
-format-padding = 1
+format-prefix-padding =1 
+format-padding = 0
 format-foreground = #5e81ac
 label = %time%
 label-foreground = ${colors.bright}
@@ -112,9 +112,20 @@ label-foreground = ${colors.bright}
 type = custom/ipc
 initial = 1
 format-foreground = #ebcb8b
-format-padding = 1
+format-padding = 0
 hook-0 = echo "%{A1:dunstctl set-paused true && polybar-msg hook dunst 2:}%{A}"
 hook-1 = echo "%{A1:dunstctl set-paused false && polybar-msg hook dunst 1:}%{A}"
+
+[module/usage]
+type = custom/script
+exec = /home/badtz/.config/polybar/usage.sh
+interval = 30
+label = %output%
+format-prefix = 
+format-prefix-padding = 0
+format-foreground = #a3be8c
+format-padding = 1
+label-foreground = ${colors.bright}
 
 [module/create]
 type = custom/script
@@ -122,9 +133,9 @@ exec = /home/badtz/.config/polybar/minecraft.sh 13.91.107.220 12
 interval = 500
 label = %output%
 format-prefix = 
-format-prefix-padding = 0
+format-prefix-padding = 1
 format-foreground = #ebcb8b
-format-padding = 1
+format-padding = 0.5
 label-foreground = ${colors.bright}
 
 [module/flowerland]
@@ -149,11 +160,28 @@ format-foreground = #a3be8c
 format-padding = 1
 label-foreground = ${colors.bright}
 
+[module/yt]
+type = custom/script
+exec = /home/badtz/.config/polybar/yt.sh
+click-left = mpv "https://www.youtube.com/user/destiny/live"
+interval = 500
+label = %output%
+format-prefix-padding = 0
+format-foreground = #a3be8c
+format-padding = 1
+label-foreground = ${colors.bright}
+
 [module/pomo]
 type = custom/script
 interval = 1
 exec = pomo status
 
+[module/gcal_next_event]
+type = custom/script
+exec = /home/badtz/.config/polybar/next_gcal_event.sh
+interval = 300
+format-padding = 1
+click-left = xdg-open "https://calendar.google.com"
 
 
 [bar/two]

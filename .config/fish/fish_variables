@@ -1,5 +1,7 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
+SETUVAR --export AWS_CONFIG_FILE:/home/badtz/\x2econfig/aws/config
+SETUVAR --export AWS_SHARED_CREDENTIALS_FILE:/home/badtz/\x2econfig/aws/credentials
 SETUVAR --export BROWSER:firefox
 SETUVAR CONDA_AUTO_ACTIVATE_BASE:false
 SETUVAR --export --path GOPATH:/home/badtz/\x2ecache/go

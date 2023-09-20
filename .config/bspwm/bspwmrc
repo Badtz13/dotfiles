@@ -4,11 +4,17 @@
 sxhkd &
 fcitx -d &
 setxkbmap pl &
-fish -c fehbg &
+# xrandr --output HDMI-A-0 --mode 1920x1200 --rate 59.95 --output DisplayPort-1 --mode 1920x1080 --rate 143.98 --right-of HDMI-A-0 --output DisplayPort-2 --mode 1920x1080 --rate 60.00 --right-of DisplayPort-1
+xrandr --output DisplayPort-1 --mode 1920x1080 --rate 143.98 --output HDMI-A-0 --mode 1920x1200 --rate 59.95 --left-of DisplayPort-1 --output DisplayPort-2 --mode 1920x1080 --rate 60.00 --right-of DisplayPort-1
+
+# wal -i "/home/badtz/Pictures/wallpapers/current/1.jpg" -n
+# wal -R
 dunst &
 sh ~/.config/polybar/launch.sh
 antidot init
 picom --experimental-backends --backend glx -b
+fswebcam -S 5 -q -b -r 1000x1000 --no-banner /home/badtz/Caps/$(date "+%Y-%m-%d>%H:%M:%S").png
+fish -c fehbg &
 
 # mouseid=$(xinput | grep G703 | grep pointer | awk -F= '{print $2}' | awk '{print $1}')
 # xinput --set-prop $mouseid 'libinput Accel Speed' -.6
@@ -19,9 +25,10 @@ export _JAVA_AWT_WM_NONREPARENTING=1
 xsetroot -cursor_name left_ptr
 
 # setup workspaces
-bspc monitor DP-2 -d Media Docs
-bspc monitor DP-4 -d Main Web
-bspc monitor HDMI-0 -d Chat Dev Extra Tools
+bspc monitor HDMI-A-0 -d Media Docs
+bspc monitor DisplayPort-1 -d Main Web
+bspc monitor DisplayPort-2 -d Chat Dev Extra Tools
+
 
 # handle monitors
 bspc config remove_disabled_monitors true
@@ -32,7 +39,8 @@ bspc config border_width 2
 bspc config window_gap 16
 
 bspc config normal_border_color "#4c566a"
-bspc config focused_border_color "#88c0d0"
+# bspc config focused_border_color "#88c0d0"
+bspc config focused_border_color "#a3be8c"
 
 bspc config split_ratio         	0.5
 bspc config borderless_monocle  	true
@@ -57,3 +65,4 @@ bspc rule -a discord desktop="Chat"
 bspc rule -a firefox:Toolkit state=floating desktop="Chat" rectangle=652x362+3862+45
 bspc rule -a Mumble:"Mumble -- 1.4.230" state=pseudo_tiled desktop="Chat" rectangle=630x350+160+120
 bspc rule -a Mumble:"Mumble Server Connect" state=floating
+bspc rule -a "Genymotion Player" state=pseudo_tiled desktop="Main" rectangle=1878x822+1939+139
